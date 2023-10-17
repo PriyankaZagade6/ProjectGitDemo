@@ -45,6 +45,47 @@ public class LoginPage extends BaseTest {
 		Assert.assertEquals(HomeActualtitle,expected_HomeTitle);
 	}
 	
+	public void clickOnElectronics() {
+
+		 electronics.click();
+
+       }
+
+   public void clickOnCellPhones() {
+
+     cellPhone.click();
+     }
+
+   public void clickOnAddToCart() {
+
+      addToCartBtn.click();
+   }
+
+ 
+    public void validateMsg() {
+
+      successMsg.isDisplayed();
+    }
+
+
+    public void ClickOnShoppingcart() {
+
+    	ShoppingCartLink.click();
+    }
+
+	
+    public void VerifyShoppingcartProduct() {
+
+    	
+       String expected_ProductTitle ="Smartphone";
+		
+	
+		//Assert.assertEquals(HomeActualtitle,expected_HomeTitle);
+    	String Product=ShoppingCartVerify.getText();
+    	Assert.assertEquals(Product,expected_ProductTitle);
+    }
+
+	
 	WebDriver driver;
 
 	public LoginPage(WebDriver driver) {
@@ -66,6 +107,25 @@ public class LoginPage extends BaseTest {
 	
 	@FindBy(xpath = "(//input[@type=\"submit\"])[2]")
     private WebElement submitBtn;
+	
+	
+	@FindBy(xpath = "(//a[@href=\"/electronics\"])[1]")
+    private WebElement electronics;
+
+   @FindBy(xpath = "//img[@alt=\"Picture for category Cell phones\"]")
+   private WebElement cellPhone;
+
+   @FindBy(xpath = "(//input[@value=\"Add to cart\"])[1]")
+   private WebElement addToCartBtn;
+
+    @FindBy(xpath = "//p[text()='The product has been added to your ']")
+    private WebElement successMsg;
+	
+	@FindBy(xpath = "(//*[@id='topcartlink']/a/span[1]")
+	private WebElement ShoppingCartLink;
+	
+	@FindBy(xpath = "(//*[@class='product-name']")
+	private WebElement ShoppingCartVerify;
 	
 	
 

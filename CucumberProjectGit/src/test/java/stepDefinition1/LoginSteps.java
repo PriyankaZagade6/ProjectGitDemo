@@ -44,6 +44,32 @@ public class LoginSteps extends BaseTest {
 	public void verify_login_title() {
 		loginPage.getLoginPageTitle();
 	}
+	
+	@Then("Click on Electronice section link")
+	public void click_on_electronice_section_link() {
+		loginPage.clickOnElectronics();
+	}
+
+	@Then("Click on Cell phone link")
+	public void click_on_cell_phone_link() {
+		loginPage.clickOnCellPhones();
+	}
+
+	@Then("verify mobile is add to cart")
+	public void verify_mobile_is_add_to_cart() {
+		loginPage.clickOnAddToCart();
+		loginPage.validateMsg();
+	}
+
+	@Then("Click on Shopping cart")
+	public void click_on_shopping_cart() {
+		loginPage.ClickOnShoppingcart();
+	}
+
+	@Then("Verify product is added or not")
+	public void verify_product_is_added_or_not() {
+		loginPage.VerifyShoppingcartProduct();
+	}
 
 
 }

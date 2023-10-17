@@ -11,6 +11,11 @@ Feature: Web Shop page feature
     When user enter the following details "<Email>","<Password>"
     Then Click on Login button
     Then Verify Login Title
+    And Click on Electronice section link
+    Then Click on Cell phone link
+    And verify mobile is add to cart
+   # Then Click on Shopping cart
+   # And Verify product is added or not
    
    
    Examples:
