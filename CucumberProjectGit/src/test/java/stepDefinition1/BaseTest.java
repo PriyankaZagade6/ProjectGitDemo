@@ -22,8 +22,8 @@ public class BaseTest {
 			driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
 		}
 
-		public void navigateUrl(String url) {
-			driver.get(url);
+		public void navigateUrl() {
+			driver.get("https://demowebshop.tricentis.com/");
 		}
 		
 		public void closeBrowser()

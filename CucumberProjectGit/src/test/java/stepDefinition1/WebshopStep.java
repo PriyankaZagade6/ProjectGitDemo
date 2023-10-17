@@ -11,7 +11,7 @@ public class WebshopStep extends BaseTest {
 	@Given("I navigate to {string}")
 	public void i_navigate_to(String url) {
 		openBrowser();
-		navigateUrl(url);
+		navigateUrl();
 	}
 
 	@When("I click on Register Link")
